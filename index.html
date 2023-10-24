@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            font-family: Courier, monospace;
+            font-weight: bold;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .password-input {
+            padding: 10px;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Pop-up Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Password</h2>
+        <input type="password" class="password-input" placeholder="Enter Password" id="password">
+        <br>
+        <button class="submit-button" id="submit-button">Submit</button>
+    </div>
+
+    <!-- Pop-up Message -->
+    <div class="popup" id="popup">
+        <p>Incorrect password. Please try again.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        // Define the expected password
+        const expectedPassword = 'supermario';
+
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            if (password === expectedPassword) {
+                // Password is correct, redirect to a page
+                window.location.href = "supermario.html";
+            } else {
+                // Password is incorrect, display the pop-up
+                var popup = document.getElementById('popup');
+                popup.style.display = 'block';
+                document.getElementById('password').value = ''; // Clear the password input
+            }
+        }
+
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+
+        // Attach click event to the submit button
+        document.getElementById('submit-button').addEventListener('click', checkPassword);
+    </script>
+</body>
+</html>

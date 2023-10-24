@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+            font-family: Courier, monospace;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .news-label {
+            font-size: 36px; /* Increased font size for the label */
+            background-color: lightblue;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            text-decoration: underline; /* Underline the label */
+        }
+
+        .container {
+            text-align: center;
+            background-color: lightblue;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .headline {
+            font-size: 24px; /* Font size for the news content */
+            font-weight: bold;
+            font-family: Courier, monospace;
+            text-decoration: underline; /* Underline the news content */
+        }
+
+        .news-image {
+            max-width: 70%; /* Adjusted to 70% width */
+        }
+
+        .news-paragraph {
+            font-size: 18px; /* Font size for the paragraph */
+            text-align: left;
+        }
+
+        .news-link {
+            font-size: 18px;
+        }
+
+        .news-button {
+            font-size: 18px;
+            background-color: yellow;
+            border: 2px solid black;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="news-label">News</div>
+
+    <div class="container">
+        <p class="headline">Israel-Palestine War Updates</p>
+        <img class="news-image" src="war-picture.jpg" alt="War Picture">
+        <p class="news-paragraph">The number of people killed in Gaza has exceeded 5,000 according to latest reports from de facto authorities there, amid intensifying Israeli airstrikes in response to Hamas attacks, while humanitarians repeated urgent calls for a ceasefire and more aid convoys.</p>
+
+        <br>
+
+        <p class="news-paragraph">In addition to the overall death toll, the number of UN staff members working with the Palestine refugee agency UNRWA has reached 35, according to the latest situation report released late on Monday. A further 18 staffers have been injured.</p>
+
+        <p class="news-paragraph">At least 40 UNRWA installations have been damaged since the violence began on 7 October.</p>
+
+        <p class="news-paragraph">To learn more, visit <a class="news-link" href="https://news.un.org/en/" target="_blank">here</a>.</p>
+
+        <a href="respect.html"><button class="news-button">Click here to pay respect</button></a>
+    </div>
+</body>
+</html>
